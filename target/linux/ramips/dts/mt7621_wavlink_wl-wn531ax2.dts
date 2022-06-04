@@ -3,8 +3,8 @@
 #include "mt7621_wavlink_wl-wn53xax.dtsi"
 
 / {
-	compatible = "wavlink,wl-wn531a2", "mediatek,mt7621-soc";
-	model = "Wavlink WL-WN531A2";
+	compatible = "wavlink,wl-wn531ax2", "mediatek,mt7621-soc";
+	model = "Wavlink WL-WN531AX2";
 };
 
 &wifi0{
