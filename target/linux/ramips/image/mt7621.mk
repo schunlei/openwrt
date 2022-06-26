@@ -1783,7 +1783,7 @@ define Device/wavlink_wl-wn531ax2
   $(Device/dsa-migration)
   DEVICE_VENDOR := Wavlink
   DEVICE_MODEL := WL-WN531AX2
-  DEVICE_PACKAGES := kmod-mt7603 kmod-mt7915e kmod-mt7915-firmware kmod-usb3
+  DEVICE_PACKAGES := kmod-mt7603 kmod-mt7915e kmod-usb3
   KERNEL := kernel-bin | lzma | fit lzma $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb | pad-to 64k
   KERNEL_INITRAMFS := kernel-bin | lzma | fit lzma $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb with-initrd
   IMAGE_SIZE := 15040k
