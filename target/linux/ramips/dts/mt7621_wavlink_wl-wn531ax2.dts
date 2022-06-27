@@ -114,22 +114,6 @@
 	};
 };
 
-&port0{
-	label = "lan1";
-};
-
-&port1{
-	label = "lan2";
-};
-
-&port2{
-	label = "lan3";
-};
-
-&port3{
-	label = "lan4";
-};
-
 
 &pcie {
 	status = "okay";
@@ -210,4 +194,21 @@
 	macaddr_factory_e006: macaddr@e006 {
 		reg = <0xe006 0x6>;
 	};
+};
+
+
+&port0{
+	label = "lan1";
+};
+
+&port1{
+	label = "lan2";
+};
+
+&port2{
+	label = "lan3";
+};
+
+&port3{
+	label = "lan4";
 };
