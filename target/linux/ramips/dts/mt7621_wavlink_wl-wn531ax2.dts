@@ -105,7 +105,7 @@
 				read-only;
 			};
 
-			firmware: partition@90000 {
+			partition@90000 {
 				compatible = "denx,uimage";
 				label = "firmware";
 				reg = <0x90000 0x3fb0000>;
