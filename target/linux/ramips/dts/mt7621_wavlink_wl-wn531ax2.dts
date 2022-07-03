@@ -46,7 +46,6 @@
 
 	leds {
 		compatible = "gpio-leds";
-		compatible = "gpio-leds";
 
 		wifi {
 			label = "blue:wifi";
