@@ -49,18 +49,18 @@
 
 		wifi {
 			label = "blue:wifi";
-			gpios = <&gpio 44 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio 23 GPIO_ACTIVE_LOW>;
 			linux,default-trigger = "phy0tpt";
 		};
 
 		led_status_blue: led_status_blue {
 			label = "blue:status";
-			gpios = <&gpio 5 GPIO_ACTIVE_HIGH>;
+			gpios = <&gpio 16 GPIO_ACTIVE_HIGH>;
 		};
 
 		led_status_red: led_status_red {
 			label = "red:status";
-			gpios = <&gpio 4 GPIO_ACTIVE_HIGH>;
+			gpios = <&gpio 17 GPIO_ACTIVE_HIGH>;
 		};
 	};
 };
