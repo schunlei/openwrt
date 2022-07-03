@@ -66,11 +66,11 @@
 	status = "okay";
 };
 
-&wifi0{
+&wifi0 {
 	ieee80211-freq-limit = <2400000 2500000>;
 };
 
-&wifi1{
+&wifi1 {
 	ieee80211-freq-limit = <5000000 6000000>;
 };
 
