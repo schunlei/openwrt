@@ -15,6 +15,10 @@
 		led-running = &led_status_blue;
 		led-upgrade = &led_status_red;
 	};
+	
+	chosen {
+		bootargs = "console=ttyS0,115200";
+	};
 
 	keys {
 		compatible = "gpio-keys";
