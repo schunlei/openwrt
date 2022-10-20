@@ -79,7 +79,8 @@
 	m25p80@0 {
 		compatible = "jedec,spi-nor";
 		reg = <0>;
-		linux,modalias = "m25p80", "en25q64";
+		compatible = "gd25q128"
+		linux,modalias = "m25p80", "gd25q128";
 		spi-max-frequency = <40000000>;
 
 		partitions {
