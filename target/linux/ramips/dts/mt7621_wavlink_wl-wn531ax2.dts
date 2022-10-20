@@ -74,9 +74,9 @@
 	};
 };
 
-&i2c {
-	status = "okay";
-};
+//&i2c {
+//	status = "okay";
+//};
 
 &spi0 {
 	status = "okay";
