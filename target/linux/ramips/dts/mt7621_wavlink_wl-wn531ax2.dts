@@ -187,6 +187,10 @@
 	status = "okay";
 };
 
+&uartlite3 {
+	status = "okay";
+};
+
 &factory {
 	compatible = "nvmem-cells";
 	#address-cells = <1>;
