@@ -1785,7 +1785,7 @@ define Device/wavlink_wl-wn531ax2
 #  KERNEL_LOADADDR := 0x81001000
   KERNEL := kernel-bin | lzma | fit lzma $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb
   KERNEL_INITRAMFS := kernel-bin | lzma | fit lzma $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb with-initrd
-  IMAGE_SIZE := 16040k
+  IMAGE_SIZE := 15040k
 endef
 TARGET_DEVICES += wavlink_wl-wn531ax2
 
