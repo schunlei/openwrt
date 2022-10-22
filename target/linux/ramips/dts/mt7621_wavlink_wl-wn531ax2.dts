@@ -78,7 +78,7 @@
 //	status = "okay";
 //};
 
-&spi0 {
+&spi32766 {
 	status = "okay";
 
 	m25p80@0 {
