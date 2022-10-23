@@ -85,14 +85,13 @@
 	m25p80@0 {
 		#address-cells = <1>;
 		#size-cells = <1>;
-		//compatible = "jedec,spi-nor";
+		compatible = "jedec,spi-nor";
 		reg = <0 0>;
-		compatible = "en25q64";
+		//compatible = "en25q64";
 		linux,modalias = "m25p80", "en25q64", "gd25q128";
 		spi-max-frequency = <40000000>;
 
-		//partitions {
-
+		partitions {
 
 			partition@0 {
 				label = "Bootloader";
@@ -117,7 +116,7 @@
 				label = "firmware";
 				reg = <0x90000 0xe00000>;
 			};
-		//};
+		};
 	};
 };
 
