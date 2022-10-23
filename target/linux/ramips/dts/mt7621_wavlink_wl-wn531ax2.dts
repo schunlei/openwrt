@@ -85,14 +85,13 @@
 	m25p80@0 {
 		#address-cells = <1>;
 		#size-cells = <1>;
-		//compatible = "jedec,spi-nor";
+		compatible = "jedec,spi-nor";
 		reg = <0 0>;
-		compatible = "m25p80";
-		linux,modalias = "m25p80", "w25q128", "gd25q128";
+		//compatible = "m25p80";
+		//linux,modalias = "m25p80", "w25q128", "gd25q128";
 		spi-max-frequency = <40000000>;
 
 		partitions {
-
 			partition@0 {
 				label = "Bootloader";
 				reg = <0x0 0x30000>;
@@ -112,7 +111,7 @@
 			};
 
 			partition@90000 {
-				#compatible = "denx,uimage";
+				//compatible = "denx,uimage";
 				label = "firmware";
 				reg = <0x90000 0xe00000>;
 			};
