@@ -115,6 +115,11 @@
 				label = "firmware";
 				reg = <0x90000 0xe00000>;
 			};
+			
+			partition@ef0000 {				
+				label = "vendor";
+				reg = <0xef0000 0x80000>;
+			};
 		};
 	};
 };
