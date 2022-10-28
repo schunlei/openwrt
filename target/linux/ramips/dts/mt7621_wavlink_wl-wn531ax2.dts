@@ -188,6 +188,13 @@
 //	};
 //};
 
+&state_default {
+	gpio {
+		groups = "uart2", "rgmii2";
+		function = "gpio";
+	};
+};
+
 &pinctrl {
         state_default: pinctrl0 {
                 gpio {
