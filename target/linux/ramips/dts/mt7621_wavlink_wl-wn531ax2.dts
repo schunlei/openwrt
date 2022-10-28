@@ -85,8 +85,8 @@
 	m25p80@0 {
 		#address-cells = <1>;
 		#size-cells = <1>;
-		//compatible = "jedec,spi-nor";
-		compatible = "ralink,mt7621-spi";
+		compatible = "jedec,spi-nor";
+		//compatible = "ralink,mt7621-spi";
 		reg = <0 0>;
 		//compatible = "m25p80";
 		//linux,modalias = "m25p80", "w25q128", "gd25q128";
@@ -96,19 +96,19 @@
 			partition@0 {
 				label = "Bootloader";
 				reg = <0x0 0x30000>;
-				//read-only;
+				read-only;
 			};
 
 			partition@30000 {
 				label = "Config";
 				reg = <0x30000 0x10000>;
-				//read-only;
+				read-only;
 			};
 
 			factory: partition@50000 {
 				label = "Factory";
 				reg = <0x50000 0x40000>;
-				//read-only;
+				read-only;
 			};
 
 			partition@90000 {
