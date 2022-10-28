@@ -18,7 +18,8 @@
 	};
 	
 	chosen {
-		bootargs = "console=ttyS0,115200 mtdparts=raspi:256k(u-boot),64k(u-boot-env),256k(factory),-(firmware)";
+		//bootargs = "console=ttyS0,115200 mtdparts=raspi:256k(u-boot),64k(u-boot-env),256k(factory),-(firmware)";
+		bootargs = "console=ttyS0,115200 mem=256M";
 	};
 	
 	memory@0 {
