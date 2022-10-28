@@ -86,10 +86,10 @@
 	m25p80@0 {
 		#address-cells = <1>;
 		#size-cells = <1>;
-		compatible = "jedec,spi-nor";
+		//compatible = "jedec,spi-nor";
 		//compatible = "ralink,mt7621-spi";
 		reg = <0>;
-		//compatible = "m25p80";
+		compatible = "m25p80";
 		//linux,modalias = "m25p80", "w25q128", "gd25q128";
 		spi-max-frequency = <40000000>;
 
