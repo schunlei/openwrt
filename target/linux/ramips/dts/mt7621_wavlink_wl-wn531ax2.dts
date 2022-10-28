@@ -183,19 +183,19 @@
 	};
 };
 
-//&state_default {
-//	gpio {
-//		groups = "rgmii2", "jtag", "wdt";
-//		function = "gpio";
-//	};
-//};
-
 &state_default {
 	gpio {
-		groups = "uart2", "rgmii2";
+		groups = "rgmii2", "jtag", "wdt";
 		function = "gpio";
 	};
 };
+
+//&state_default {
+//	gpio {
+//		groups = "uart2", "rgmii2";
+//		function = "gpio";
+//	};
+//};
 
 &pinctrl {
         state_default: pinctrl0 {
