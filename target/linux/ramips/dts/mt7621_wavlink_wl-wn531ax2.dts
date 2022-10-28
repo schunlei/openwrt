@@ -6,7 +6,7 @@
 #include <dt-bindings/input/input.h>
 
 / {
-	compatible = "wavlink,wl-wn531ax2", "mediatek,mt7621-soc";
+	compatible = "wavlink,wl-wn531ax2", "mediatek,ap-mt7621a-v60", "mediatek,mt7621-soc";
 	model = "Wavlink WL-WN531AX2";
 	
 	aliases {
