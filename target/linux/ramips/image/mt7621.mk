@@ -1787,9 +1787,9 @@ define Device/wavlink_wl-wn531ax2
   KERNEL := kernel-bin | lzma | fit lzma $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb
 #  KERNEL_INITRAMFS := kernel-bin | lzma | fit lzma $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb with-initrd
   IMAGE_SIZE := 15040k
-  IMAGE/sysupgrade.bin := sysupgrade-tar | check-size | append-metadata
-#  IMAGE/sysupgrade.bin := append-kernel | pad-to $$$$(KERNEL_SIZE) | append-rootfs | pad-rootfs | \
-#	check-size | append-metadata
+#  IMAGE/sysupgrade.bin := sysupgrade-tar | check-size | append-metadata
+  IMAGE/sysupgrade.bin := append-kernel | pad-to $$$$(KERNEL_SIZE) | append-rootfs | pad-rootfs | \
+	check-size | append-metadata
 endef
 
 #define Device/wavlink_wl-wn531ax2
