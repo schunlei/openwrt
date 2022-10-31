@@ -114,7 +114,8 @@
 			};
 
 			partition@90000 {
-				compatible = "denx,fit", "openwrt,uimage", "denx,uimage";
+				#compatible = "denx,fit", "openwrt,uimage", "denx,uimage";
+				compatible = "denx,fit";
 				label = "firmware";
 				reg = <0x90000 0xe00000>;
 			};
