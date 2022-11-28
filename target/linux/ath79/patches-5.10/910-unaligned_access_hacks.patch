@@ -118,9 +118,9 @@
  
 --- a/include/uapi/linux/ip.h
 +++ b/include/uapi/linux/ip.h
-@@ -103,7 +103,7 @@ struct iphdr {
- 	__be32	saddr;
- 	__be32	daddr;
+@@ -105,7 +105,7 @@ struct iphdr {
+ 		__be32	daddr;
+ 	);
  	/*The options start here. */
 -};
 +} __attribute__((packed, aligned(2)));
@@ -129,10 +129,10 @@
  struct ip_auth_hdr {
 --- a/include/uapi/linux/ipv6.h
 +++ b/include/uapi/linux/ipv6.h
-@@ -132,7 +132,7 @@ struct ipv6hdr {
- 
- 	struct	in6_addr	saddr;
- 	struct	in6_addr	daddr;
+@@ -134,7 +134,7 @@ struct ipv6hdr {
+ 		struct	in6_addr	saddr;
+ 		struct	in6_addr	daddr;
+ 	);
 -};
 +} __attribute__((packed, aligned(2)));
  
@@ -305,7 +305,7 @@
  	list_for_each_entry(p, head, list) {
 --- a/net/ipv4/tcp_output.c
 +++ b/net/ipv4/tcp_output.c
-@@ -612,48 +612,53 @@ static void tcp_options_write(__be32 *pt
+@@ -609,48 +609,53 @@ static void tcp_options_write(__be32 *pt
  	u16 options = opts->options;	/* mungable copy */
  
  	if (unlikely(OPTION_MD5 & options)) {
@@ -382,7 +382,7 @@
  	}
  
  	if (unlikely(opts->num_sack_blocks)) {
-@@ -661,16 +666,17 @@ static void tcp_options_write(__be32 *pt
+@@ -658,16 +663,17 @@ static void tcp_options_write(__be32 *pt
  			tp->duplicate_sack : tp->selective_acks;
  		int this_sack;
  
@@ -406,7 +406,7 @@
  		}
  
  		tp->rx_opt.dsack = 0;
-@@ -683,13 +689,14 @@ static void tcp_options_write(__be32 *pt
+@@ -680,13 +686,14 @@ static void tcp_options_write(__be32 *pt
  
  		if (foc->exp) {
  			len = TCPOLEN_EXP_FASTOPEN_BASE + foc->len;
@@ -706,7 +706,7 @@
  EXPORT_SYMBOL(xfrm_parse_spi);
 --- a/net/ipv4/tcp_input.c
 +++ b/net/ipv4/tcp_input.c
-@@ -4087,14 +4087,16 @@ static bool tcp_parse_aligned_timestamp(
+@@ -4128,14 +4128,16 @@ static bool tcp_parse_aligned_timestamp(
  {
  	const __be32 *ptr = (const __be32 *)(th + 1);
  
