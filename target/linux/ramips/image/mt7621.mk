@@ -1860,20 +1860,29 @@ TARGET_DEVICES += unielec_u7621-06-64m
 
 define Device/wavlink_wl-wn531ax2
   $(Device/dsa-migration)
-#  $(Device/uimage-lzma-loader)
+  $(Device/uimage-lzma-loader)
   DEVICE_VENDOR := Wavlink
   DEVICE_MODEL := WL-WN531AX2
   DEVICE_DTS_CONFIG := config@1
   DEVICE_DTS_DELIMITER := @
   DEVICE_PACKAGES := kmod-mt7915e kmod-usb3
-#  KERNEL_SIZE := 880k
+
+  BLOCKSIZE := 64k
+
+#  LOADER_FLASH_OFFS := 0x90000
+  KERNEL_SIZE := 4096k
 #  KERNEL_LOADADDR := 0x81001000
+#  KERNEL := kernel-bin | lzma | pad-to $$(KERNEL_SIZE)
+#| relocate-kernel
   KERNEL := kernel-bin | lzma | fit lzma $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb
+
 #  KERNEL_INITRAMFS := kernel-bin | lzma | fit lzma $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb with-initrd
   IMAGE_SIZE := 16064k
+  IMAGES += factory.bin
   IMAGE/sysupgrade.bin := sysupgrade-tar | check-size | append-metadata
 #  IMAGE/sysupgrade.bin := append-kernel | pad-to $$$$(KERNEL_SIZE) | append-rootfs | pad-rootfs | \
 #	check-size | append-metadata
+  IMAGE/factory.bin := kernel-bin | relocate-kernel | lzma | fit lzma $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb | pad-to $$(KERNEL_SIZE)
 endef
 
 #define Device/wavlink_wl-wn531ax2
@@ -1884,6 +1893,7 @@ endef
 #  DEVICE_PACKAGES := kmod-mt7915e kmod-usb3
 #endef
 TARGET_DEVICES += wavlink_wl-wn531ax2
+
 
 define Device/wavlink_wl-wn531a6
   $(Device/dsa-migration)
