@@ -1860,7 +1860,7 @@ TARGET_DEVICES += unielec_u7621-06-64m
 
 define Device/wavlink_wl-wn531ax2
   $(Device/dsa-migration)
-  $(Device/uimage-lzma-loader)
+#  $(Device/uimage-lzma-loader)
   DEVICE_VENDOR := Wavlink
   DEVICE_MODEL := WL-WN531AX2
   DEVICE_DTS_CONFIG := config@1
