@@ -89,7 +89,7 @@
 		compatible = "jedec,spi-nor";
 		//compatible = "ralink,mt7621-spi";
 		reg = <0x0>;		
-		linux,modalias = "m25p128", "w25q128", "gd25q128";
+		//linux,modalias = "m25p128", "w25q128", "gd25q128";
 		spi-max-frequency = <48000000>;
 		m25p,fast-read;
 
