@@ -24,7 +24,7 @@
 	
 	memory@0 {
 		device_type = "memory";
-		//reg = <0x1000000 0x10000000>; //,<0x1000000 0x10000000>;   /*512M 2+7个0 ，256 1+7个0*/
+		//reg = <0x1000000 0x10000000>;   /*512M 2+7个0 ，256 1+7个0*/
         //reg = <0x1000000 0xf000000>;
         reg=<0x0 0x10000000>;
 	};
@@ -78,9 +78,9 @@
 	};
 };
 
-//&i2c {
-//	status = "okay";
-//};
+/*&i2c {
+	status = "okay";
+}; */
 
 &spi0 {
 	status = "okay";
@@ -116,7 +116,7 @@
 			};
 
 			partition@90000 {
-				#compatible = "denx,fit", "openwrt,uimage", "denx,uimage";
+				//compatible = "denx,fit", "openwrt,uimage", "denx,uimage";
 				compatible = "denx,fit";
 				label = "firmware";
 				reg = <0x90000 0xe00000>;
