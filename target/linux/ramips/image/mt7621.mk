@@ -1880,8 +1880,7 @@ define Device/wavlink_wl-wn531ax2
   IMAGE_SIZE := 16064k
   IMAGES += factory.bin
 #  IMAGE/sysupgrade.bin := sysupgrade-tar | check-size | append-metadata
-  IMAGE/sysupgrade.bin := append-kernel | pad-to $$$$(KERNEL_SIZE) | append-rootfs | pad-rootfs | \
-#	check-size | append-metadata
+  IMAGE/sysupgrade.bin := append-kernel | pad-to $$$$(KERNEL_SIZE) | append-rootfs | pad-rootfs | check-size | append-metadata
   IMAGE/factory.bin := kernel-bin | relocate-kernel | lzma | fit lzma $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb | pad-to $$(KERNEL_SIZE)
 endef
 
