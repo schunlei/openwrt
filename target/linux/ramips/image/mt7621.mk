@@ -1867,7 +1867,7 @@ define Device/wavlink_wl-wn531ax2
   DEVICE_DTS_DELIMITER := @
   DEVICE_PACKAGES := kmod-mt7915e kmod-usb3
 
-  BLOCKSIZE := 64k
+  BLOCKSIZE := 128k
 
 #  LOADER_FLASH_OFFS := 0x90000
   KERNEL_SIZE := 4096k
