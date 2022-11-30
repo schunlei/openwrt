@@ -125,7 +125,7 @@
 			partition@ef0000 {				
 				label = "vendor";
 				reg = <0xef0000 0x80000>;
-                read-only;
+                //read-only;
 			};
 		};
 	};
@@ -234,7 +234,7 @@
 	};
 };
 
-
+/*
 &port0{
 	label = "lan1";
 };
@@ -250,3 +250,4 @@
 &port3{
 	label = "lan4";
 };
+*/
