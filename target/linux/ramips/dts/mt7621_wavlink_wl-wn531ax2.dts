@@ -128,43 +128,6 @@
 };
 
 
-&pcie {
-	status = "okay";
-};
-
-
-&gmac0 {
-	nvmem-cells = <&macaddr_factory_e000>;
-	nvmem-cell-names = "mac-address";
-};
-
-&switch0 {
-	ports {
-		port0: port@0 {
-			status = "okay";
-		};
-
-		port1: port@1 {
-			status = "okay";
-		};
-
-		port2: port@2 {
-			status = "okay";
-		};
-
-		port3: port@3 {
-			status = "okay";
-		};
-
-		port@4 {
-			status = "okay";
-			label = "wan";
-			nvmem-cells = <&macaddr_factory_e006>;
-			nvmem-cell-names = "mac-address";
-		};
-	};
-};
-
 &state_default {
 	gpio {
 		groups = "rgmii2", "jtag", "wdt";
