@@ -79,7 +79,7 @@
 &spi0 {
 	status = "okay";
 
-	m25p80@0 {	
+	flash@0 {	
 		compatible = "jedec,spi-nor";
 		//compatible = "ralink,mt7621-spi";
 		reg = <0x0>;		
