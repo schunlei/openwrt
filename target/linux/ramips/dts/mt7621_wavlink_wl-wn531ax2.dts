@@ -121,6 +121,7 @@
 			partition@ef0000 {				
 				label = "vendor";
 				reg = <0xef0000 0x80000>;
+                read-only;
 			};
 		};
 	};
@@ -131,25 +132,6 @@
 	status = "okay";
 };
 
-&pcie0 {
-	wifi0: mt76@0,0 {
-		compatible = "mediatek,mt76";
-		reg = <0x0000 0 0 0 0>;
-		mediatek,mtd-eeprom = <&factory 0x0>;
-	};
-};
-
-&pcie1 {
-	wifi1: mt76@0,0 {
-		compatible = "mediatek,mt76";
-		reg = <0x0000 0 0 0 0>;
-		mediatek,mtd-eeprom = <&factory 0x8000>;
-	};
-};
-
-&ethernet {
-	pinctrl-0 = <&mdio_pins>, <&rgmii1_pins>;
-};
 
 &gmac0 {
 	nvmem-cells = <&macaddr_factory_e000>;
