@@ -2,9 +2,6 @@
 
 #include "mt7621_wavlink_wl-wn53xax.dtsi"
 
-#include <dt-bindings/gpio/gpio.h>
-#include <dt-bindings/input/input.h>
-
 / {
 	compatible = "wavlink,wl-wn531ax2", "mediatek,ap-mt7621a-v60", "mediatek,mt7621-soc";
 	model = "Wavlink WL-WN531AX2";
