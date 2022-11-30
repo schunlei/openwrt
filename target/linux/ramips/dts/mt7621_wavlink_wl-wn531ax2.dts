@@ -61,7 +61,7 @@
 			gpios = <&gpio 23 GPIO_ACTIVE_LOW>;
 			linux,default-trigger = "phy0tpt";
 		};
-
+/*
 		led_status_blue: led_status_blue {
 			label = "blue:status";
 			gpios = <&gpio 16 GPIO_ACTIVE_HIGH>;
@@ -71,6 +71,7 @@
 			label = "red:status";
 			gpios = <&gpio 17 GPIO_ACTIVE_HIGH>;
 		};
+*/
 	};
 };
 
