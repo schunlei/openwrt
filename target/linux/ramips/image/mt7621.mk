@@ -1870,7 +1870,7 @@ define Device/wavlink_wl-wn531ax2
   BLOCKSIZE := 64k
 
 #  LOADER_FLASH_OFFS := 0x90000
-  KERNEL_SIZE := 4096k
+  KERNEL_SIZE := 880k
 #  KERNEL_LOADADDR := 0x81001000
 #  KERNEL := kernel-bin | lzma | pad-to $$(KERNEL_SIZE)
 #| relocate-kernel
